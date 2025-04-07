@@ -1,6 +1,6 @@
 "use client";
 
-import useGetNowLocation from "@/util/getNowLocation";
+// import useGetNowLocation from "@/util/getNowLocation";
 import { useEffect } from "react";
 
 export default function KakaoMap() {
@@ -40,7 +40,7 @@ export default function KakaoMap() {
           imageSize = new window.kakao.maps.Size(64, 69),
           imageOption = { offset: new window.kakao.maps.Point(27, 69) };
 
-        var markerImage = new window.kakao.maps.MarkerImage(
+        let markerImage = new window.kakao.maps.MarkerImage(
             imageSrc,
             imageSize,
             imageOption
@@ -50,7 +50,7 @@ export default function KakaoMap() {
             location?.longitude
           );
 
-        var marker = new window.kakao.maps.Marker({
+        let marker = new window.kakao.maps.Marker({
           position: markerPosition,
           image: markerImage,
         });
@@ -59,14 +59,14 @@ export default function KakaoMap() {
 
         // 폴리라인 생성
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
-        var linePath = [
+        let linePath = [
           new window.kakao.maps.LatLng(37.378096126580786, 126.63507329150045),
           new window.kakao.maps.LatLng(37.37975936374476, 126.63244011662495),
           new window.kakao.maps.LatLng(37.38563985584139, 126.6387234751049),
         ];
 
         // 지도에 표시할 선을 생성합니다
-        var polyline = new window.kakao.maps.Polyline({
+        let polyline = new window.kakao.maps.Polyline({
           path: linePath, // 선을 구성하는 좌표배열 입니다
           strokeWeight: 5, // 선의 두께 입니다
           strokeColor: "#FFAE00", // 선의 색깔입니다

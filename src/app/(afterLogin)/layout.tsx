@@ -1,4 +1,4 @@
-import BottomNavigation from "@/app/_components/bottomNavigation";
+import BottomNavigation from "@/app/(afterLogin)/_components/bottomNavigation";
 
 export default function MainLayout({
   children,

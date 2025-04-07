@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "위치 기반 폐의약품 수거 위치 확인",
 };
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 declare global {
   interface Window {
     kakao: any;
