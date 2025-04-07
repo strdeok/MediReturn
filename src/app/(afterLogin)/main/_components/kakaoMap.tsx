@@ -23,8 +23,8 @@ export default function KakaoMap() {
     const onLoadKakaoAPI = () => {
       // 맵 생성
       window.kakao.maps.load(() => {
-        let container = document.getElementById("map");
-        let options = {
+        const container = document.getElementById("map");
+        const options = {
           center: new window.kakao.maps.LatLng(
             location?.latitude,
             location?.longitude
@@ -32,10 +32,10 @@ export default function KakaoMap() {
           level: 3,
         };
 
-        let map = new window.kakao.maps.Map(container, options);
+        const map = new window.kakao.maps.Map(container, options);
 
         // 마커 생성
-        let imageSrc =
+        const imageSrc =
             "https://cdn-icons-png.flaticon.com/512/6570/6570902.png", // 마커이미지의 주소
           imageSize = new window.kakao.maps.Size(64, 69),
           imageOption = { offset: new window.kakao.maps.Point(27, 69) };
